@@ -1,0 +1,61 @@
+/* Magazine section styles */
+.magazine {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.magazine h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-images img {
+    width: 100%;
+    max-width: 400px;
+    opacity: 0.3;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.carousel-images img.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.carousel-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    z-index: 1;
+}
+
+.left-btn {
+    left: 35%;
+}
+
+.right-btn {
+    right: 35%;
+}

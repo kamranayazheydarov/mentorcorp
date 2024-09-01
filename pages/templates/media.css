@@ -1,0 +1,94 @@
+@media (max-width: 1024px) {
+    .header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav {
+        flex-direction: row;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .nav a {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .services {
+        padding: 30px 10px;
+    }
+
+    .services .images {
+        width: 100%;
+    }
+
+    .services .images .image-container {
+        width: calc(50% - 10px); /* Adjust width and gap for tablet */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    body{
+        width: 100%;
+    }
+    .nav {
+    display: none; /* Hide desktop navigation */
+    }
+
+    .menu-toggle {
+        display:block; /* Show menu toggle button */
+        color: #fff;
+    }
+
+    .header {
+        flex-direction: row; /* Keep items in a row on mobile */
+        justify-content: space-between; /* Ensure logo and toggle button are at ends */
+        position: relative; /* Ensure header is positioned relative for dropdown */
+    }
+
+.home img {
+width: 100%; /* Image occupies 70% of the container width */
+height: auto; /* Maintain aspect ratio */ 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for better visual effect */
+
+}
+
+    .services {
+        padding: 30px 10px;
+    }
+
+    .services .images {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px; /* Reduce gap for mobile */
+    }
+
+    .services .images .image-container {
+        width: 100%; /* Full width for each image container */
+        max-width: none; /* Remove max-width constraint */
+    
+    }
+
+}
+
+/* Extra Small Mobile View */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    .services .images {
+        gap: 5px; /* Further reduce gap for extra small screens */
+    }
+}

@@ -1,0 +1,39 @@
+/* Basic styles for navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    position: relative; /* Allow positioning of child elements */
+}
+
+/* Navigation links */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1px;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+
+    nav a {
+        margin: 10px 0; /* Vertical spacing for links */
+    }
+
+    /* Specific styles to move "About Us" to the next line */
+    nav .about {
+        margin-top: 10px; /* Adds spacing above "About Us" */
+    }
+}
+
+/* Ensure the "About Us" link stays on the same line for larger screens */
+@media (min-width: 769px) {
+    nav {
+        flex-direction: row; /* Horizontal layout for larger screens */
+    }
+}

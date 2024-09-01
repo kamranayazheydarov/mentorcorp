@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    width: 70%;
+    display: block;
+    align-items: center;
+    margin: 0 auto;
+
+    
+}
+
+/* Header styles */
+.header {
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20pt;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.header .menu-toggle {
+    display: none; /* Hide menu toggle button by default */
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 20px; /* Space between logo and menu toggle */
+    color: #fff;
+}
+
+.nav {
+    display: flex;
+    gap: 20px; /* Space between navigation items */
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    top: 60px; /* Position below the header */
+    right: 20px; /* Align with the right side of the header */
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.dropdown a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.dropdown a:hover {
+    background-color: #444;
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Home section styles */
+.home {
+color: #fff; /* Ensure text is visible over the image */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 0;
+box-sizing: border-box;
+}
+
+.home img {
+width: 100%; /* Image occupies 70% of the container width */
+height: auto; /* Maintain aspect ratio */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for better visual effect */
+
+}
+
+
+
+
+.info a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info a:hover {
+    text-decoration: underline;
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+/* Responsive Design */
+/* Tablet View */

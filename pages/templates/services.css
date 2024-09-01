@@ -1,0 +1,60 @@
+
+
+        /* Services section styles */
+        .services {
+            color: #333; /* Text color */
+            justify-content: center; /* Center content horizontally */
+            width: 100%;
+            text-align: center;
+        }
+        .services h2 {
+            margin-bottom: 40px; /* Space below the heading */
+            font-size: 36px; /* Font size for the heading */
+            font-weight: bold; /* Make the heading bold */
+        }
+
+        .services .images {
+            display: flex;
+            justify-content: center; /* Center images horizontally */
+            gap: 20px; /* Space between images */
+            width: 80%; /* Width of images container is 70% of the services section */
+            flex-wrap: wrap; 
+            margin: 0 auto;/* Allow images to wrap on smaller screens */
+        }
+
+        .services .images .image-container {
+            position: relative;
+            width: calc(50% - 20px); /* Ensure images take up 50% of the container width minus the gap */
+            max-width: 796px; /* Max width of image container */
+            height: auto;
+        }
+
+        .services .images img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Cover the container area */
+            transition: opacity 0.3s ease;
+        }
+
+        .services .images .info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .services .images .image-container:hover img {
+            opacity: 0.3; /* Reduce image opacity on hover */
+        }
+
+        .services .images .image-container:hover .info {
+            opacity: 1; /* Show info on hover */
+        }

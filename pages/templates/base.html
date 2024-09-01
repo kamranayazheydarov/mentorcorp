@@ -1,0 +1,161 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Header with Interactive Services Section</title>
+
+    <link href="{% static 'services.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'media.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'magazine.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'about.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'contact.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'index.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'header.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'footer.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'language.js' %}" rel="stylesheet" type="text/js">
+
+    <script src="{% static 'language.js' %}"></script>
+    <script src="{% static 'magazine.js' %}"></script>
+
+
+
+    <style >
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="{% static '/files/logo.png' %}" alt="Logo"> <!-- Replace 'logo.png' with your logo image file -->
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+        </div>
+        <nav class="nav">
+            <a href="#home" class="homes">Home</a>
+            <a href="#services" class="services">Services</a>
+            <a href="#magazine" class="magazines">Magazine</a>
+            <a href="#about" class="aboutus">About_Us</a>
+            <a href="#contact" class="contacts">Contact</a>
+        </nav>
+        <div class="dropdown" id="dropdown-menu">
+            <a href="#home" class="home">Home</a>
+            <a href="#services" class="services">Services</a>
+            <a href="#magazine" class="magazines">Magazine</a>
+            <a href="#about" class="aboutus">About Us</a>
+            <a href="#contact" class="contacts">Contact</a>
+        </div>
+        <div class="language-switcher">
+                <a href="?lang=en" class="lang-link" id="lang-en">
+                    <img src="{% static '/files/en_flag.png' %}" alt="English" class="lang-flag">
+                </a>
+                <a href="?lang=az" class="lang-link" id="lang-az">
+                    <img src="{% static '/files/az_flag.png' %}" alt="Azerbaijani" class="lang-flag">
+                </a>
+            </div>
+    </div>
+
+
+    <div id="home" class="section home">
+        <img src="{% static '/files/home.png' %}" alt="Home Image">
+    </div>
+
+
+    <div id="services" class="section services">
+        <h2>Services</h2>
+        <div class="images">
+            <div class="image-container">
+                <img src="{% static '/files/services_1.png' %}" alt="Service 1"> <!-- Replace with actual image -->
+                <div class="info">
+                    <p>Service 1 Description</p>
+                    <a href="google.com">Get More Information</a>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="{% static '/files/services_2.png' %}" alt="Service 2"> <!-- Replace with actual image -->
+                <div class="info">
+                    <p>Service 2 Description</p>
+                    <a href="service2.html">Get More Information</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="magazine" class="section magazine">
+        <h2>Magazine</h2>
+        <div class="carousel">
+            <button class="carousel-btn left-btn" onclick="prevSlide()">&#9664;</button>
+            <div class="carousel-images">
+                <img src="{% static '/files/page1.jpg' %}" alt="Magazine 1" >
+                
+                <img src="{% static '/files/services_1.png' %}" alt="Magazine 2" class="active">
+                <img src="{% static '/files/page3.jpg' %}" alt="Magazine 3">
+            </div>
+            <button class="carousel-btn right-btn" onclick="nextSlide()">&#9654;</button>
+        </div>
+    </div>
+    
+
+
+    <div id="about" class="section about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p>Mentorcorp is a specialized consulting group focused on advancing management practices through targeted mentorship and research. As the "Management Mentorship Researching Group", Mentorcorp is dedicated to helping organizations navigate complex management challenges by providing expert mentorship and conducting in-depth research on best practices, emerging trends, and innovative strategies in the management sector.</p>
+            <p>By partnering with Mentorcorp, companies gain access to a wealth of knowledge and resources designed to enhance leadership capabilities, improve operational efficiency, and drive sustainable growth. Mentorcorp’s team of seasoned professionals works closely with clients to understand their unique needs, offering tailored mentorship programs and actionable insights that empower organizations to achieve their strategic goals in an ever-evolving business landscape.</p>
+        </div>
+    </div>
+
+
+
+    <div id="contact" class="section contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><strong>Phone number:</strong>+994509824931</p>
+                <p><strong>Email:</strong> johndoe@example.com</p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a></p>
+                <p><strong>Twitter:</strong> <a href="https://twitter.com/johndoe" target="_blank">@johndoe</a></p>
+            </div>
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form action="/submit-form" method="post">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2024 MentorCorp. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.linkedin.com/company/mentorcorp" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://twitter.com/mentorcorp" target="_blank" class="social-link">Twitter</a>
+                <a href="https://facebook.com/mentorcorp" target="_blank" class="social-link">Facebook</a>
+            </div>
+        </div>
+    </footer>
+    
+
+
+    <script>
+        function toggleMenu() {
+            const dropdown = document.getElementById('dropdown-menu');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+    
+    </script>
+</body>

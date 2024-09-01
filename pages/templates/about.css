@@ -1,0 +1,24 @@
+/* About Us section styles */
+.about {
+    background-color: #ffffff;
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
